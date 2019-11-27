@@ -6,6 +6,13 @@ public class ComputerFactory extends AbstractFactory{
     }
 
     Computer getComputer(String type) {
-        return null;
+        if (type ==  null) return null;
+        else if (type.equalsIgnoreCase("tablet")){
+            return new Tablet();
+        }
+        else if (type.equalsIgnoreCase("laptop")){
+            return new Laptop();
+        }
+        else return null;
     }
 }
